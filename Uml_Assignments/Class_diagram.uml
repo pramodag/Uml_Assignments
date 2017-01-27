@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_u2mvYMENEeaDtqN8EYwtGw" name="RootElement">
+    <packagedElement xmi:type="uml:Package" xmi:id="_0sj2IMENEeaDtqN8EYwtGw" name="Uml_Assignments">
+      <packagedElement xmi:type="uml:Package" xmi:id="_03D18MENEeaDtqN8EYwtGw" name="com">
+        <packagedElement xmi:type="uml:Package" xmi:id="_03GSMMENEeaDtqN8EYwtGw" name="hgb">
+          <packagedElement xmi:type="uml:Package" xmi:id="_03JVgMENEeaDtqN8EYwtGw" name="uml">
+            <packagedElement xmi:type="uml:Package" xmi:id="_03MY0MENEeaDtqN8EYwtGw" name="e1">
+              <packagedElement xmi:type="uml:Class" xmi:id="_03UUoMENEeaDtqN8EYwtGw" name="UMLFirst" visibility="public">
+                <generalization xmi:type="uml:Generalization" xmi:id="_1CCW4MENEeaDtqN8EYwtGw" general="_03f60MENEeaDtqN8EYwtGw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1C6goMENEeaDtqN8EYwtGw" name="start" specification="_1CS1kMENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    BorderPane bPane = new BorderPane();&#xD;
+    Group root = new Group();&#xD;
+    Scene scene = new Scene(root, 800, 600, Color.WHITE);&#xD;
+    //SubScene s2 = new SubScene(root, 800, 20);&#xD;
+    //		s2.setStyle(&quot;-fx-border-style: solid inside;&quot; + &quot;-fx-border-width: 2;&quot;&#xD;
+    //				+ &quot;-fx-border-insets: 5;&quot; + &quot;-fx-border-radius: 5;&quot;&#xD;
+    //				+ &quot;-fx-border-color: blue;&quot;);&#xD;
+    primaryStage.setTitle(&quot;Sample UML application&quot;);&#xD;
+    HBox hBox = new HBox();&#xD;
+    bPane.setTop(hBox);&#xD;
+    //bPane.setCenter(s2);&#xD;
+    bPane.setOpacity(0.25);&#xD;
+    RadioButton rb1 = new RadioButton(&quot;Rectangle&quot;);&#xD;
+    RadioButton rb2 = new RadioButton(&quot;Line&quot;);&#xD;
+    hBox.getChildren().addAll(rb1, rb2);&#xD;
+    /*hBox.setStyle(&quot;-fx-padding: 10;&quot; + &quot;-fx-spacing: 20;&quot;
+				+ &quot;-fx-border-style: solid inside;&quot; + &quot;-fx-border-width: 2;&quot;
+				+ &quot;-fx-border-insets: 5;&quot; + &quot;-fx-border-radius: 5;&quot;
+				+ &quot;-fx-border-color: blue;&quot;);*/&#xD;
+    root.getChildren().add(bPane);&#xD;
+    primaryStage.setScene(root);&#xD;
+    primaryStage.show();&#xD;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1DOpsMENEeaDtqN8EYwtGw" name="main" specification="_1DJxMMENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    launch(args);&#xD;
+</body>
+                </ownedBehavior>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1CS1kMENEeaDtqN8EYwtGw" name="start" visibility="public" method="_1C6goMENEeaDtqN8EYwtGw" raisedException="_1CiGIMENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1CXHAMENEeaDtqN8EYwtGw" name="primaryStage" type="_1CIdgMENEeaDtqN8EYwtGw"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1DJxMMENEeaDtqN8EYwtGw" name="main" visibility="public" isStatic="true" method="_1DOpsMENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1DM0gMENEeaDtqN8EYwtGw" name="args" type="_1DAAMMENEeaDtqN8EYwtGw"/>
+                </ownedOperation>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_1DaP4MENEeaDtqN8EYwtGw" name="e2">
+              <packagedElement xmi:type="uml:Class" xmi:id="_1DehUMENEeaDtqN8EYwtGw" name="CustomLine" visibility="public">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1Dr8sMENEeaDtqN8EYwtGw" name="line" visibility="private" type="_1Dkn8MENEeaDtqN8EYwtGw" isUnique="false"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1FALUMENEeaDtqN8EYwtGw" name="CustomLine" specification="_1EsCQMENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    // Creating a new line object to draw line.&#xD;
+    line = new Line();&#xD;
+    // Setting line starting point with values&#xD;
+    line.setStartX(RectLine.x);&#xD;
+    line.setStartY(RectLine.y);&#xD;
+    // Getting 2.nd point to draw the line.&#xD;
+    line.setEndX(x);&#xD;
+    line.setEndY(y);&#xD;
+    // setting thickness of line&#xD;
+    line.setStrokeWidth(Constants.lineStroke);&#xD;
+    line.setStroke(Paint.valueOf(Constants.lineColor));&#xD;
+    // treated as first rectangle point for new line&#xD;
+    if (Constants.dashed.equalsIgnoreCase(type)) {&#xD;
+        line.setStrokeDashOffset(Constants.dashOffset);&#xD;
+        line.getStrokeDashArray().addAll(5.0, 10.0);&#xD;
+    }&#xD;
+    line.setOnMouseClicked(new EventHandler&lt;MouseEvent>() {&#xD;
+&#xD;
+        @Override&#xD;
+        public void handle(MouseEvent event) {&#xD;
+            if (event.getButton() == MouseButton.SECONDARY) {&#xD;
+                System.out.println(&quot;Adding text field&quot;);&#xD;
+                TextField tf = new TextField(&quot;Please name the object&quot;);&#xD;
+                tf.setLayoutX(line.getStartX() + (line.getEndX() - line.getStartX()) / 2);&#xD;
+                tf.setLayoutY(line.getStartY() + (line.getEndY() - line.getStartY()) / 2);&#xD;
+                RectLine.root.getChildren().add(tf);&#xD;
+            }&#xD;
+        }&#xD;
+    });&#xD;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1FO00MENEeaDtqN8EYwtGw" name="getLine" specification="_1FGR8MENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    return this.line;&#xD;
+</body>
+                </ownedBehavior>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1EsCQMENEeaDtqN8EYwtGw" name="CustomLine" visibility="public" method="_1FALUMENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1E3ocMENEeaDtqN8EYwtGw" name="x">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1E6rwMENEeaDtqN8EYwtGw" name="y">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1E9vEMENEeaDtqN8EYwtGw" name="type" type="_1DAAMMENEeaDtqN8EYwtGw"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1FGR8MENEeaDtqN8EYwtGw" name="getLine" visibility="public" method="_1FO00MENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1FLxgMENEeaDtqN8EYwtGw" type="_1Dkn8MENEeaDtqN8EYwtGw" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_1FhIsMENEeaDtqN8EYwtGw" name="CustomRectangle" visibility="public">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1Fsu4MENEeaDtqN8EYwtGw" name="rect" visibility="private" type="_1FkzEMENEeaDtqN8EYwtGw" isUnique="false"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1FxAUMENEeaDtqN8EYwtGw" name="type" visibility="private" type="_1DAAMMENEeaDtqN8EYwtGw" isUnique="false"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1GEiUMENEeaDtqN8EYwtGw" name="CustomRectangle" specification="_1F0qsMENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    this.type = type;&#xD;
+    System.out.println(&quot;Creating rectangle object&quot;);&#xD;
+    rect = new Rectangle();&#xD;
+    rect.setUserData(type);&#xD;
+    rect = new Rectangle(x, y, Constants.width, Constants.height);&#xD;
+    rect.setFill(Color.TRANSPARENT);&#xD;
+    rect.setStrokeWidth(Constants.strokeWidth);&#xD;
+    rect.setStroke(Paint.valueOf(Constants.rectangleColor));&#xD;
+    if (Constants.dashed.equalsIgnoreCase(type)) {&#xD;
+        rect.setStrokeDashOffset(Constants.dashOffset);&#xD;
+        rect.getStrokeDashArray().addAll(5.0, 10.0);&#xD;
+    }&#xD;
+    rect.setOpacity(Constants.opacity);&#xD;
+    System.out.println(&quot;Done creating rectangle onject&quot;);&#xD;
+    rect.setOnMouseClicked(new EventHandler&lt;MouseEvent>() {&#xD;
+&#xD;
+        @Override&#xD;
+        public void handle(MouseEvent event) {&#xD;
+            if (event.getButton() == MouseButton.PRIMARY) {&#xD;
+                // Checking if first point is set&#xD;
+                if (RectLine.x == -1 &amp;&amp; RectLine.y == -1) {&#xD;
+                    System.out.println(&quot;Mouse clicked on rectangle&quot;);&#xD;
+                    // No first point setting values.&#xD;
+                    RectLine.x = rect.getX() + rect.getWidth() / 2;&#xD;
+                    RectLine.y = rect.getY() + rect.getHeight() / 2;&#xD;
+                    RectLine.type = type;&#xD;
+                    System.out.println(RectLine.x + &quot; &quot; + RectLine.y + &quot; &quot; + type);&#xD;
+                } else {&#xD;
+                    CustomLine cLine = null;&#xD;
+                    if (&quot;DashedLine&quot;.equalsIgnoreCase(RectLine.tg1.getSelectedToggle().getUserData().toString())) {&#xD;
+                        if (!(type.equalsIgnoreCase(RectLine.type))) {&#xD;
+                            cLine = new CustomLine(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 2, Constants.dashed);&#xD;
+                            Line line = cLine.getLine();&#xD;
+                            System.out.println(&quot;Adding line&quot;);&#xD;
+                            RectLine.root.getChildren().add(line);&#xD;
+                        }&#xD;
+                    }&#xD;
+                    if (&quot;SolidLine&quot;.equalsIgnoreCase(RectLine.tg1.getSelectedToggle().getUserData().toString())) {&#xD;
+                        if ((Constants.solid.equalsIgnoreCase(type) &amp;&amp; Constants.solid.equalsIgnoreCase(RectLine.type))) {&#xD;
+                            cLine = new CustomLine(rect.getX() + rect.getWidth() / 2, rect.getY() + rect.getHeight() / 2, Constants.solid);&#xD;
+                            Line line = cLine.getLine();&#xD;
+                            System.out.println(line);&#xD;
+                            RectLine.root.getChildren().add(line);&#xD;
+                        }&#xD;
+                    }&#xD;
+                    RectLine.x = RectLine.y = -1;&#xD;
+                    RectLine.type = null;&#xD;
+                }&#xD;
+            } else if (event.getButton() == MouseButton.SECONDARY) {&#xD;
+                System.out.println(&quot;Adding text field&quot;);&#xD;
+                TextField tf = new TextField(&quot;Please name the object&quot;);&#xD;
+                tf.setLayoutX(rect.getX() + 2);&#xD;
+                tf.setLayoutY(rect.getY() + 10);&#xD;
+                RectLine.root.getChildren().add(tf);&#xD;
+            }&#xD;
+        }&#xD;
+    });&#xD;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1GMeIMENEeaDtqN8EYwtGw" name="getRectangle" specification="_1GIMsMENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    return this.rect;&#xD;
+</body>
+                </ownedBehavior>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1F0qsMENEeaDtqN8EYwtGw" name="CustomRectangle" visibility="public" method="_1GEiUMENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1F9NkMENEeaDtqN8EYwtGw" name="x">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1F_CwMENEeaDtqN8EYwtGw" name="y">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1GBfAMENEeaDtqN8EYwtGw" name="type" type="_1DAAMMENEeaDtqN8EYwtGw"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1GIMsMENEeaDtqN8EYwtGw" name="getRectangle" visibility="public" method="_1GMeIMENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1GKo8MENEeaDtqN8EYwtGw" type="_1FkzEMENEeaDtqN8EYwtGw" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_1GYrYMENEeaDtqN8EYwtGw" name="RectLine" visibility="public">
+                <generalization xmi:type="uml:Generalization" xmi:id="_1GbHoMENEeaDtqN8EYwtGw" general="_03f60MENEeaDtqN8EYwtGw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1Gdj4MENEeaDtqN8EYwtGw" name="x" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1GgnMMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>-1</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1GicYMENEeaDtqN8EYwtGw" name="y" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1GnU4MENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>-1</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1GqYMMENEeaDtqN8EYwtGw" name="type" visibility="public" isStatic="true" type="_1DAAMMENEeaDtqN8EYwtGw" isUnique="false"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1G3MgMENEeaDtqN8EYwtGw" name="root" visibility="public" isStatic="true" type="_1GupoMENEeaDtqN8EYwtGw" isUnique="false"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1HF2AMENEeaDtqN8EYwtGw" name="tg1" visibility="public" isStatic="true" type="_1G_IUMENEeaDtqN8EYwtGw" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1HKHcMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>new ToggleGroup()</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_YxUTUNZCEeaiQ8XvMlsvVw" name="customline" type="_1DehUMENEeaDtqN8EYwtGw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_djj6UNZCEeaiQ8XvMlsvVw" name="customline" type="_1DehUMENEeaDtqN8EYwtGw"/>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_3xX00NggEeaGMavp-qOhOw" name="customline" type="_1DehUMENEeaDtqN8EYwtGw" association="_3xAocNggEeaGMavp-qOhOw">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cLhkUOO_EeambKo2v8PVXA"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cLl1wOO_EeambKo2v8PVXA" value="*"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_9LCBIdggEeaGMavp-qOhOw" name="customrectangle" type="_1FhIsMENEeaDtqN8EYwtGw" association="_9LAzANggEeaGMavp-qOhOw">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QZPpEOO_EeambKo2v8PVXA"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QaKPEOO_EeambKo2v8PVXA" value="*"/>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_JkfRINghEeaGMavp-qOhOw" name="constants" type="_1Hk-MMENEeaDtqN8EYwtGw" association="_JkeDANghEeaGMavp-qOhOw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1HW7wMENEeaDtqN8EYwtGw" name="main" specification="_1HNx0MENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    launch(args);&#xD;
+</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1HfeoMENEeaDtqN8EYwtGw" name="start" specification="_1HamIMENEeaDtqN8EYwtGw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+    // Creating window&#xD;
+    primaryStage.setTitle(&quot;Rectangle Line Exercise&quot;);&#xD;
+    root = new Group();&#xD;
+    Scene scene = new Scene(root, 800, 600, Color.WHITE);&#xD;
+    primaryStage.setScene(scene);&#xD;
+    // CReating a Hbox for radio buttons&#xD;
+    HBox hbox = new HBox();&#xD;
+    hbox.setMinWidth(scene.getWidth());&#xD;
+    hbox.setPadding(new Insets(10, 12, 10, 12));&#xD;
+    // Gap between nodes&#xD;
+    hbox.setSpacing(15);&#xD;
+    // Creating radio buttons.&#xD;
+    RadioButton rb1 = new RadioButton();&#xD;
+    rb1.setText(&quot;Solid Rectangle&quot;);&#xD;
+    rb1.setUserData(&quot;SolidRectangle&quot;);&#xD;
+    rb1.setSelected(true);&#xD;
+    rb1.setToggleGroup(tg1);&#xD;
+    RadioButton rb2 = new RadioButton();&#xD;
+    rb2.setText(&quot;Solid Line&quot;);&#xD;
+    rb2.setUserData(&quot;SolidLine&quot;);&#xD;
+    rb2.setToggleGroup(tg1);&#xD;
+    // CReating radio buttons for dashed&#xD;
+    RadioButton rb3 = new RadioButton();&#xD;
+    rb3.setText(&quot;Dashed Rectangle&quot;);&#xD;
+    rb3.setUserData(&quot;DashedRectangle&quot;);&#xD;
+    rb3.setToggleGroup(tg1);&#xD;
+    RadioButton rb4 = new RadioButton();&#xD;
+    rb4.setText(&quot;Dashed Line&quot;);&#xD;
+    rb4.setUserData(&quot;DashedLine&quot;);&#xD;
+    rb4.setToggleGroup(tg1);&#xD;
+    // adding radio buttons to Hbox&#xD;
+    hbox.getChildren().addAll(rb1, rb3, rb2, rb4);&#xD;
+    // adding hbox to root&#xD;
+    root.getChildren().addAll(hbox);&#xD;
+    // adding on mouse clicked event for creating rectangles&#xD;
+    scene.setOnMouseClicked(new EventHandler&lt;MouseEvent>() {&#xD;
+&#xD;
+        @Override&#xD;
+        public void handle(MouseEvent event) {&#xD;
+            for (Node node : root.getChildren()) {&#xD;
+                if (node instanceof Rectangle &amp;&amp; node.contains(new Point2D(event.getX(), event.getY())))&#xD;
+                    return;&#xD;
+            }&#xD;
+            if (&quot;SolidRectangle&quot;.equalsIgnoreCase(tg1.getSelectedToggle().getUserData().toString())) {&#xD;
+                CustomRectangle cRrect = new CustomRectangle(event.getX(), event.getY(), Constants.solid);&#xD;
+                Rectangle rect = cRrect.getRectangle();&#xD;
+                root.getChildren().add(rect);&#xD;
+            } else if (&quot;DashedRectangle&quot;.equalsIgnoreCase(tg1.getSelectedToggle().getUserData().toString())) {&#xD;
+                CustomRectangle cRrect = new CustomRectangle(event.getX(), event.getY(), Constants.dashed);&#xD;
+                Rectangle rect = cRrect.getRectangle();&#xD;
+                root.getChildren().add(rect);&#xD;
+            }&#xD;
+        }&#xD;
+    });&#xD;
+    primaryStage.show();&#xD;
+</body>
+                </ownedBehavior>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1HNx0MENEeaDtqN8EYwtGw" name="main" visibility="public" isStatic="true" method="_1HW7wMENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1HRcMMENEeaDtqN8EYwtGw" name="args" type="_1DAAMMENEeaDtqN8EYwtGw">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1HUfgMENEeaDtqN8EYwtGw"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1HVtoMENEeaDtqN8EYwtGw" value="*"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_1HamIMENEeaDtqN8EYwtGw" name="start" visibility="public" method="_1HfeoMENEeaDtqN8EYwtGw" raisedException="_1CiGIMENEeaDtqN8EYwtGw">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_1HdCYMENEeaDtqN8EYwtGw" name="primaryStage" type="_1CIdgMENEeaDtqN8EYwtGw"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_1Hk-MMENEeaDtqN8EYwtGw" name="Constants" visibility="public">
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1HnacMENEeaDtqN8EYwtGw" name="rectangleColor" visibility="public" isStatic="true" type="_1DAAMMENEeaDtqN8EYwtGw" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1HrE0MENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;Red&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1HthEMENEeaDtqN8EYwtGw" name="opacity" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1HxLcMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>0.5</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1HznsMENEeaDtqN8EYwtGw" name="strokeWidth" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1H3SEMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>2</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1H5uUMENEeaDtqN8EYwtGw" name="dashOffset" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1H8KkMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>5</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1H9_wMENEeaDtqN8EYwtGw" name="width" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1IBDEMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>80</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1IDfUMENEeaDtqN8EYwtGw" name="height" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1IHJsMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>80</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1IK0EMENEeaDtqN8EYwtGw" name="dashed" visibility="public" isStatic="true" type="_1DAAMMENEeaDtqN8EYwtGw" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1IQToMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;Dashed&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1IWaQMENEeaDtqN8EYwtGw" name="solid" visibility="public" isStatic="true" type="_1DAAMMENEeaDtqN8EYwtGw" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1IarsMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;Solid&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1IdH8MENEeaDtqN8EYwtGw" name="lineStroke" visibility="public" isStatic="true" isUnique="false">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1IgLQMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>4</body>
+                  </defaultValue>
+                </ownedAttribute>
+                <ownedAttribute xmi:type="uml:Property" xmi:id="_1IingMENEeaDtqN8EYwtGw" name="lineColor" visibility="public" isStatic="true" type="_1DAAMMENEeaDtqN8EYwtGw" isUnique="false">
+                  <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_1IlDwMENEeaDtqN8EYwtGw" name="defaultValue">
+                    <language>JAVA</language>
+                    <body>&quot;Green&quot;</body>
+                  </defaultValue>
+                </ownedAttribute>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_3xAocNggEeaGMavp-qOhOw" memberEnd="_3xX00NggEeaGMavp-qOhOw _3xZC8NggEeaGMavp-qOhOw">
+                <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3xQgENggEeaGMavp-qOhOw" source="org.eclipse.papyrus">
+                  <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3xRHINggEeaGMavp-qOhOw" key="nature" value="UML_Nature"/>
+                </eAnnotations>
+                <ownedEnd xmi:type="uml:Property" xmi:id="_3xZC8NggEeaGMavp-qOhOw" name="rectline" type="_1GYrYMENEeaDtqN8EYwtGw" association="_3xAocNggEeaGMavp-qOhOw"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_9LAzANggEeaGMavp-qOhOw" memberEnd="_9LCBIdggEeaGMavp-qOhOw _9LCoMNggEeaGMavp-qOhOw">
+                <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9LBaENggEeaGMavp-qOhOw" source="org.eclipse.papyrus">
+                  <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9LCBINggEeaGMavp-qOhOw" key="nature" value="UML_Nature"/>
+                </eAnnotations>
+                <ownedEnd xmi:type="uml:Property" xmi:id="_9LCoMNggEeaGMavp-qOhOw" name="rectline" type="_1GYrYMENEeaDtqN8EYwtGw" association="_9LAzANggEeaGMavp-qOhOw"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_JkeDANghEeaGMavp-qOhOw" memberEnd="_JkfRINghEeaGMavp-qOhOw _Jkf4MNghEeaGMavp-qOhOw">
+                <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JkeqENghEeaGMavp-qOhOw" source="org.eclipse.papyrus">
+                  <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JkeqEdghEeaGMavp-qOhOw" key="nature" value="UML_Nature"/>
+                </eAnnotations>
+                <ownedEnd xmi:type="uml:Property" xmi:id="_Jkf4MNghEeaGMavp-qOhOw" name="rectline" type="_1GYrYMENEeaDtqN8EYwtGw" association="_JkeDANghEeaGMavp-qOhOw"/>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_03XX8MENEeaDtqN8EYwtGw" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_03abQMENEeaDtqN8EYwtGw" name="javafx">
+        <packagedElement xmi:type="uml:Package" xmi:id="_03dekMENEeaDtqN8EYwtGw" name="application">
+          <packagedElement xmi:type="uml:Class" xmi:id="_03f60MENEeaDtqN8EYwtGw" name="Application"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_1CGoUMENEeaDtqN8EYwtGw" name="stage">
+          <packagedElement xmi:type="uml:Class" xmi:id="_1CIdgMENEeaDtqN8EYwtGw" name="Stage"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_1DhkoMENEeaDtqN8EYwtGw" name="scene">
+          <packagedElement xmi:type="uml:Package" xmi:id="_1DiywMENEeaDtqN8EYwtGw" name="shape">
+            <packagedElement xmi:type="uml:Class" xmi:id="_1Dkn8MENEeaDtqN8EYwtGw" name="Line"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_1FkzEMENEeaDtqN8EYwtGw" name="Rectangle"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_1GupoMENEeaDtqN8EYwtGw" name="Group"/>
+          <packagedElement xmi:type="uml:Package" xmi:id="_1G96MMENEeaDtqN8EYwtGw" name="control">
+            <packagedElement xmi:type="uml:Class" xmi:id="_1G_IUMENEeaDtqN8EYwtGw" name="ToggleGroup"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_1CebwMENEeaDtqN8EYwtGw" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_1Cfp4MENEeaDtqN8EYwtGw" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_1Cg4AMENEeaDtqN8EYwtGw" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_1CiGIMENEeaDtqN8EYwtGw" name="Exception"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_1DAAMMENEeaDtqN8EYwtGw" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_0yKu4MENEeaDtqN8EYwtGw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0yOZQMENEeaDtqN8EYwtGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_01ZCAMENEeaDtqN8EYwtGw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_01cFUMENEeaDtqN8EYwtGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_01_e8MENEeaDtqN8EYwtGw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_02AtEMENEeaDtqN8EYwtGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_1CAhsMENEeaDtqN8EYwtGw" name="javafx.application.Application" base_Classifier="_03f60MENEeaDtqN8EYwtGw"/>
+  <PapyrusJava:External xmi:id="_1CPLMMENEeaDtqN8EYwtGw" name="javafx.stage.Stage" base_Classifier="_1CIdgMENEeaDtqN8EYwtGw"/>
+  <PapyrusJava:External xmi:id="_1Cpa4MENEeaDtqN8EYwtGw" name="java.lang.Exception" base_Classifier="_1CiGIMENEeaDtqN8EYwtGw"/>
+  <PapyrusJava:External xmi:id="_1DGt4MENEeaDtqN8EYwtGw" name="java.lang.String" base_Classifier="_1DAAMMENEeaDtqN8EYwtGw"/>
+  <PapyrusJava:External xmi:id="_1DqHgMENEeaDtqN8EYwtGw" name="javafx.scene.shape.Line" base_Classifier="_1Dkn8MENEeaDtqN8EYwtGw"/>
+  <standard:Create xmi:id="_1Ez-EMENEeaDtqN8EYwtGw" base_BehavioralFeature="_1EsCQMENEeaDtqN8EYwtGw"/>
+  <PapyrusJava:External xmi:id="_1Fq5sMENEeaDtqN8EYwtGw" name="javafx.scene.shape.Rectangle" base_Classifier="_1FkzEMENEeaDtqN8EYwtGw"/>
+  <standard:Create xmi:id="_1F6xUMENEeaDtqN8EYwtGw" base_BehavioralFeature="_1F0qsMENEeaDtqN8EYwtGw"/>
+  <PapyrusJava:External xmi:id="_1G0wQMENEeaDtqN8EYwtGw" name="javafx.scene.Group" base_Classifier="_1GupoMENEeaDtqN8EYwtGw"/>
+  <PapyrusJava:External xmi:id="_1HEA0MENEeaDtqN8EYwtGw" name="javafx.scene.control.ToggleGroup" base_Classifier="_1G_IUMENEeaDtqN8EYwtGw"/>
+</xmi:XMI>

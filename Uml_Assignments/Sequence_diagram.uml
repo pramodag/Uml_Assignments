@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_tBANENghEeaGMavp-qOhOw" name="RootElement">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_tB7aINghEeaGMavp-qOhOw" name="DrawRecatngle">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_FulrsNgjEeaGMavp-qOhOw" name="RectLine" coveredBy="_OIht8NgqEeaUSb42JR4wLA _aDFbcNgqEeaUSb42JR4wLA _Ey-zgNgtEeaUSb42JR4wLA _EzAosdgtEeaUSb42JR4wLA _EzAosNgtEeaUSb42JR4wLA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_cXumUNgkEeaGMavp-qOhOw" name="Constants" coveredBy="_QC1egNgqEeaUSb42JR4wLA _SwQuENgqEeaUSb42JR4wLA _HPq4YNgtEeaUSb42JR4wLA _HPstkNgtEeaUSb42JR4wLA _HPsGgNgtEeaUSb42JR4wLA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_KuzZENgqEeaUSb42JR4wLA" name="CrateRectangle" coveredBy="_OIiVANgqEeaUSb42JR4wLA _QC03cNgqEeaUSb42JR4wLA _SwRVINgqEeaUSb42JR4wLA _aDE0YNgqEeaUSb42JR4wLA _F90O8NgtEeaUSb42JR4wLA _F92EINgtEeaUSb42JR4wLA _F902ANgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_F90O8NgtEeaUSb42JR4wLA" name="ActionExecSpec0Start" covered="_KuzZENgqEeaUSb42JR4wLA" execution="_F902ANgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_F902ANgtEeaUSb42JR4wLA" name="ActionExecSpec0" covered="_KuzZENgqEeaUSb42JR4wLA" finish="_F92EINgtEeaUSb42JR4wLA" start="_F90O8NgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_HPq4YNgtEeaUSb42JR4wLA" name="ActionExecSpec1Start" covered="_cXumUNgkEeaGMavp-qOhOw" execution="_HPsGgNgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_HPsGgNgtEeaUSb42JR4wLA" name="ActionExecSpec1" covered="_cXumUNgkEeaGMavp-qOhOw" finish="_HPstkNgtEeaUSb42JR4wLA" start="_HPq4YNgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_Ey-zgNgtEeaUSb42JR4wLA" name="ActionExecSpecStart" covered="_FulrsNgjEeaGMavp-qOhOw" execution="_EzAosNgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_EzAosNgtEeaUSb42JR4wLA" name="ActionExecSpec" covered="_FulrsNgjEeaGMavp-qOhOw" finish="_EzAosdgtEeaUSb42JR4wLA" start="_Ey-zgNgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OIht8NgqEeaUSb42JR4wLA" name="MessageSend" covered="_FulrsNgjEeaGMavp-qOhOw" message="_OIgf0NgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OIiVANgqEeaUSb42JR4wLA" name="MessageRecv" covered="_KuzZENgqEeaUSb42JR4wLA" message="_OIgf0NgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QC03cNgqEeaUSb42JR4wLA" name="MessageSend0" covered="_KuzZENgqEeaUSb42JR4wLA" message="_QCzpUNgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QC1egNgqEeaUSb42JR4wLA" name="MessageRecv0" covered="_cXumUNgkEeaGMavp-qOhOw" message="_QCzpUNgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SwQuENgqEeaUSb42JR4wLA" name="MessageSend1" covered="_cXumUNgkEeaGMavp-qOhOw" message="_SwPf8NgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SwRVINgqEeaUSb42JR4wLA" name="MessageRecv1" covered="_KuzZENgqEeaUSb42JR4wLA" message="_SwPf8NgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_aDE0YNgqEeaUSb42JR4wLA" name="MessageSend2" covered="_KuzZENgqEeaUSb42JR4wLA" message="_aDDmQNgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_aDFbcNgqEeaUSb42JR4wLA" name="MessageRecv2" covered="_FulrsNgjEeaGMavp-qOhOw" message="_aDDmQNgqEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_EzAosdgtEeaUSb42JR4wLA" name="ActionExecSpecFinish" covered="_FulrsNgjEeaGMavp-qOhOw" execution="_EzAosNgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_HPstkNgtEeaUSb42JR4wLA" name="ActionExecSpec1Finish" covered="_cXumUNgkEeaGMavp-qOhOw" execution="_HPsGgNgtEeaUSb42JR4wLA"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_F92EINgtEeaUSb42JR4wLA" name="ActionExecSpec0Finish" covered="_KuzZENgqEeaUSb42JR4wLA" execution="_F902ANgtEeaUSb42JR4wLA"/>
+    <message xmi:type="uml:Message" xmi:id="_OIgf0NgqEeaUSb42JR4wLA" name="getRectangle(x,y)" receiveEvent="_OIiVANgqEeaUSb42JR4wLA" sendEvent="_OIht8NgqEeaUSb42JR4wLA"/>
+    <message xmi:type="uml:Message" xmi:id="_QCzpUNgqEeaUSb42JR4wLA" name="getConstants()" receiveEvent="_QC1egNgqEeaUSb42JR4wLA" sendEvent="_QC03cNgqEeaUSb42JR4wLA"/>
+    <message xmi:type="uml:Message" xmi:id="_SwPf8NgqEeaUSb42JR4wLA" name="contants" receiveEvent="_SwRVINgqEeaUSb42JR4wLA" sendEvent="_SwQuENgqEeaUSb42JR4wLA"/>
+    <message xmi:type="uml:Message" xmi:id="_aDDmQNgqEeaUSb42JR4wLA" name="getRectangle():rectangle" receiveEvent="_aDFbcNgqEeaUSb42JR4wLA" sendEvent="_aDE0YNgqEeaUSb42JR4wLA"/>
+  </packagedElement>
+</uml:Model>
